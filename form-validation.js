@@ -3,7 +3,7 @@ function validate(){
   var userEntered = document.getElementById("user").value;
   var passEntered = document.getElementById("pass").value;
 
-  if (userEntered.length >= 6) {  //If username OK
+  if (userEntered.length >= 6 && userEntered.search(" ") == -1) {  //If username OK
     //Turn the username items green
     document.getElementById("usernameGroup").classList.remove("has-error");
     document.getElementById("usernameGroup").classList.add("has-success");
